@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
+using System.Runtime.InteropServices;
+using System.Security;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Smart_Organiser
 {
@@ -22,8 +18,7 @@ namespace Smart_Organiser
     public partial class MainWindow : Window
     {
 
-        private string mainDB = "localhost:27017"; //should be changed to match a mongoDB instance running on the server
-
+        private Uri mainDB = new Uri("http://localhost:3000/"); //should be changed to match a mongoDB instance running on the server
 
 
         public MainWindow()
@@ -31,9 +26,16 @@ namespace Smart_Organiser
             GetDbRefresh(mainDB);
             InitializeComponent();
         }
-        private void GetDbRefresh(string db)
+        private void GetDbRefresh(Uri db)
         {
-            Console.WriteLine(db);
+            WebRequest request = WebRequest.Create(new Uri(mainDB, "api/list"));
+            request.Method = "POST";
+            WebResponse resp = request.GetResponse();
+            StreamReader reader = new StreamReader(stream: resp.GetResponseStream());
+            string jsonSTR = reader.ReadToEnd();
+            dynamic json = JsonConvert.DeserializeObject(jsonSTR);
+            resp.Close();
+
         }
         private void refreshDB_Click(object sender, RoutedEventArgs e)
         {
@@ -60,5 +62,12 @@ namespace Smart_Organiser
         {
             MessageBox.Show("Shift Click");
         }
+    }
+    public class JSONresponse
+    {
+        public string _id { get; set; }
+        public string name { get; set; }
+        public string comment { get; set; }
+        public string reference { get; set; }
     }
 }

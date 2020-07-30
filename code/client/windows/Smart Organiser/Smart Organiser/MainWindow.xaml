@@ -19,6 +19,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="4*"/>
                         </Grid.ColumnDefinitions>
+                        <ListBox Grid.Column="0" Margin="10" x:Name="DataBase"></ListBox>
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="5*"/>
@@ -33,6 +34,7 @@
                             <Button x:Name="removeFromQueue" Click="removeFromQueue_Click" ToolTip="Hold Shift to Move All" Padding="0 10 0 10" Margin="5" Grid.Row="3">&lt;</Button>
                             <TextBlock Grid.Row="4"/>
                         </Grid>
+                        <ListBox Grid.Column="3" Margin="10" x:Name="Selected"></ListBox>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Import" FontSize="13" Padding="5 5 7 4">
@@ -44,12 +46,13 @@
             </TabControl>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="260*"/>
+                    <ColumnDefinition Width="201*"/>
+                    <ColumnDefinition Width="59*"/>
+                    <ColumnDefinition Width="260*"/>
                 </Grid.ColumnDefinitions>
-                
-                <Button x:Name="Submit" FontSize="15" Grid.Column="2" Margin="10">Submit</Button>
+
+                <Button x:Name="Submit" FontSize="15" Grid.Column="3" Margin="10,10,10,10">Submit</Button>
             </Grid>
         </StackPanel>
     </Grid>

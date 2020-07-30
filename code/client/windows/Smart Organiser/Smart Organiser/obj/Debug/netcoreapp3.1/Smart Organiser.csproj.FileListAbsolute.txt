@@ -15,3 +15,9 @@ D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organis
 D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\obj\Debug\netcoreapp3.1\Smart Organiser.AssemblyInfo.cs
 D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\obj\Debug\netcoreapp3.1\Smart Organiser.dll
 D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\obj\Debug\netcoreapp3.1\Smart Organiser.pdb
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\bin\Debug\netcoreapp3.1\Nancy.dll
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Programming\Smart-Organiser\code\client\windows\Smart Organiser\Smart Organiser\obj\Debug\netcoreapp3.1\Smart Organiser.csproj.CopyComplete
